@@ -8,6 +8,9 @@ defmodule BugDemoWeb.ParentLive do
   def render(assigns) do
     ~L"""
     <h1>Parent</h1>
+    <%= for i <- 1..3 do %>
+      <%= live_component @socket, BugDemoWeb.GroupLive, id: Integer.to_string(i) %>
+    <% end %>
     """
   end
 end
