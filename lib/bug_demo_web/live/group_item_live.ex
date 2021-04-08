@@ -8,7 +8,7 @@ defmodule BugDemoWeb.GroupItemLive do
 
   def render(assigns) do
     ~L"""
-    <div <%= if !@show do %> style="display: none;" <% end %>>
+    <div <%= unless @show do %> style="display: none;" <% end %>>
     <h5>Group Item <%= @id %></h5>
     </div>
     """
